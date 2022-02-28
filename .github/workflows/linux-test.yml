@@ -31,7 +31,7 @@ jobs:
 
     # These tests run on Linux only. Apply capabilities and verify we can
     # actually use real AF_KCM sockets.
-    - name: Apply CAP_NET_RAW
+    - name: Apply CAP_BPF
       run: sudo setcap cap_bpf+ep ./kcm.test
 
     - name: Run tests with capabilities
